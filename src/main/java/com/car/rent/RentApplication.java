@@ -1,14 +1,13 @@
-package com.hu.rentingcar;
+package com.car.rent;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class RentingcarApplication {
+public class RentApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(RentingcarApplication.class, args);
-		System.out.println("Hello world");
+		SpringApplication.run(RentApplication.class, args);
 	}
 
 }

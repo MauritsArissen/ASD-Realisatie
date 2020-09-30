@@ -1,10 +1,10 @@
-package com.hu.rentingcar;
+package com.car.rent;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class RentingcarApplicationTests {
+class RentApplicationTests {
 
 	@Test
 	void contextLoads() {
