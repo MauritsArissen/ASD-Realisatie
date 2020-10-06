@@ -1,6 +1,7 @@
 package com.car.rent.domein;
 
 import com.car.rent.enumeration.BoekingStatus;
+import com.car.rent.repository.AutoRepository;
 import com.car.rent.valueobject.*;
 
 public class Boeking {
@@ -59,4 +60,14 @@ public class Boeking {
     public void setBoekingStatus(BoekingStatus boekingStatus) {
         this.boekingStatus = boekingStatus;
     }
+
+    public void retournerningAuto() {
+        AutoRepository repository = new AutoRepository();
+
+        Auto a = repository.getAutoById(this.autoId);
+        // a.processRetour...
+
+        this.boekingStatus = BoekingStatus.AFGEHANDELD;
+    }
+
 }

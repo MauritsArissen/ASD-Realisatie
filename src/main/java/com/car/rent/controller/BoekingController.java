@@ -23,9 +23,9 @@ public class BoekingController {
     }
 
     @PutMapping("/boeking/{boekingid}/retournerning")
-    Boeking retournerningAuto(@PathVariable int boekingid, @RequestBody String data) {
-        JSONObject jsonObject = new JSONObject(data);
-        return service.retourneringAuto(boekingid, jsonObject.getInt("vestigingid"));
+    @ResponseBody
+    Boeking retournerningAuto(@PathVariable int boekingid) {
+        return service.retourneringAuto(boekingid);
     }
 
 }

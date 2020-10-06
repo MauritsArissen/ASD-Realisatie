@@ -14,7 +14,7 @@ import java.util.stream.Stream;
 public class BoekingRepository {
 
     private List<Boeking> boekingList = Stream.of(
-            new Boeking(new BoekingPeriode(new Date(), new Date()), BoekingStatus.AFGEHANDELD, new KlantId(1), new AutoId(1), new VestigingId(1), new VestigingId(2), new BetalingId(1)),
+            new Boeking(new BoekingPeriode(new Date(), new Date()), BoekingStatus.INBEHANDELING, new KlantId(1), new AutoId(1), new VestigingId(1), new VestigingId(2), new BetalingId(1)),
             new Boeking(new BoekingPeriode(new Date(), new Date()), BoekingStatus.GEANNULEERD, new KlantId(1), new AutoId(1), new VestigingId(1), new VestigingId(2), new BetalingId(1)),
             new Boeking(new BoekingPeriode(new Date(), new Date()), BoekingStatus.INBEHANDELING, new KlantId(1), new AutoId(1), new VestigingId(1), new VestigingId(2), new BetalingId(1)),
             new Boeking(new BoekingPeriode(new Date(), new Date()), BoekingStatus.GEHONOREERD, new KlantId(1), new AutoId(1), new VestigingId(1), new VestigingId(2), new BetalingId(1))
