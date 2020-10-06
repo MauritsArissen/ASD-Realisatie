@@ -20,7 +20,7 @@ public class InkoopRepository {
     ).collect(Collectors.toList());
 
 
-    public List<Inkoop> getInkoopListList() { return inkoopList; }
+    public List<Inkoop> getInkoopList() { return inkoopList; }
 
     public void store(Inkoop inkoop) { inkoopList.add(inkoop); }
 
