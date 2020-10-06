@@ -1,6 +1,7 @@
 package com.car.rent.domein;
 
 import com.car.rent.valueobject.AdresId;
+import com.car.rent.valueobject.BoekingId;
 import com.car.rent.valueobject.KlantId;
 import com.car.rent.valueobject.KlantNaam;
 
@@ -8,11 +9,13 @@ public class Klant {
     private final KlantId klantId;
     private final KlantNaam klantNaam;
     private AdresId adresId;
+    private final BoekingId boekingId;
 
-    public Klant(KlantId klantId, KlantNaam klantNaam, AdresId adresId) {
+    public Klant(KlantId klantId, KlantNaam klantNaam, AdresId adresId, BoekingId boekingId) {
         this.klantId = klantId;
         this.klantNaam = klantNaam;
         this.adresId = adresId;
+        this.boekingId = boekingId;
     }
 
     public KlantId getKlantId() {
