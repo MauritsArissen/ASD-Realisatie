@@ -1,6 +1,6 @@
 package com.car.rent.repository;
 
-import com.car.rent.domein.Adres;
+import com.car.rent.domain.Adres;
 import com.car.rent.valueobject.AdresId;
 
 import java.util.List;

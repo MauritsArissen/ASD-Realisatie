@@ -1,7 +1,6 @@
 package com.car.rent.repository;
 
-import com.car.rent.domein.Boeking;
-import com.car.rent.domein.Klant;
+import com.car.rent.domain.Boeking;
 import com.car.rent.enumeration.BoekingStatus;
 import com.car.rent.valueobject.*;
 

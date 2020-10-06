@@ -1,6 +1,6 @@
 package com.car.rent.controller;
 
-import com.car.rent.domein.Klant;
+import com.car.rent.domain.Klant;
 import com.car.rent.service.KlantService;
 import com.car.rent.valueobject.AdresId;
 import org.springframework.http.MediaType;

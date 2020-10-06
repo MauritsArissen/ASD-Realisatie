@@ -1,12 +1,10 @@
 package com.car.rent.repository;
 
-import com.car.rent.domein.Betaling;
+import com.car.rent.domain.Betaling;
 import com.car.rent.enumeration.Valuta;
 import com.car.rent.valueobject.BetalingId;
-import com.car.rent.valueobject.BoekingPeriode;
 import com.car.rent.valueobject.Prijs;
 
-import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;

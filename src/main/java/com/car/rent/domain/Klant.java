@@ -1,7 +1,6 @@
-package com.car.rent.domein;
+package com.car.rent.domain;
 
 import com.car.rent.valueobject.AdresId;
-import com.car.rent.valueobject.BoekingId;
 import com.car.rent.valueobject.KlantId;
 import com.car.rent.valueobject.KlantNaam;
 

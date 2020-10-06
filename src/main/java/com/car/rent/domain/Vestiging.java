@@ -1,4 +1,4 @@
-package com.car.rent.domein;
+package com.car.rent.domain;
 
 import com.car.rent.valueobject.VestigingId;
 
