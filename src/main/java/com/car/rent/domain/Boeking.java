@@ -12,6 +12,7 @@ public class Boeking {
     private final VestigingId startVestigingId;
     private final VestigingId eindVestigingId;
     private final BetalingId betalingId;
+    private MedewerkerId medewerkerId;
 
     public Boeking(BoekingPeriode boekingPeriode, BoekingStatus boekingStatus, KlantId klantId, AutoId autoId, VestigingId startVestigingId, VestigingId eindVestigingId, BetalingId betalingId) {
         this.boekingId = new BoekingId();
@@ -54,6 +55,14 @@ public class Boeking {
 
     public BoekingStatus getBoekingStatus() {
         return boekingStatus;
+    }
+
+    public MedewerkerId getMedewerkerId() {
+        return medewerkerId;
+    }
+
+    public void setMedewerkerId(MedewerkerId medewerkerId) {
+        this.medewerkerId = medewerkerId;
     }
 
     public void setBoekingStatus(BoekingStatus boekingStatus) {
