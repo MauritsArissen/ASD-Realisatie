@@ -1,15 +1,9 @@
 package com.car.rent.service;
 
-import com.car.rent.domain.Auto;
 import com.car.rent.domain.Betaling;
-import com.car.rent.domain.Boeking;
-import com.car.rent.repository.AutoRepository;
 import com.car.rent.repository.BetalingRepository;
-import com.car.rent.repository.BoekingRepository;
 import com.car.rent.valueobject.BetalingId;
 import com.car.rent.valueobject.BoekingId;
-import com.car.rent.valueobject.BoekingPeriode;
-import com.car.rent.valueobject.Prijs;
 
 import java.util.List;
 
