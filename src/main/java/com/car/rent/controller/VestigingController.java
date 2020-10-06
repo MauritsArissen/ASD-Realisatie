@@ -2,9 +2,8 @@ package com.car.rent.controller;
 
 import com.car.rent.domain.Vestiging;
 import com.car.rent.service.VestigingService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -21,6 +20,18 @@ public class VestigingController {
     @GetMapping("/vestiging/{id}")
     Vestiging one(@PathVariable int id) {
         return service.getById(id);
+    }
+
+    @PostMapping(value = "/vestiging", consumes = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    Vestiging newVestiging(@RequestBody Vestiging vestiging) {
+        return service.addVestiging(vestiging);
+    }
+
+    @PutMapping(value = "/vestiging/{id}", consumes = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    Vestiging changeVestigingNaam(@PathVariable int id, @RequestBody String naam) {
+        return service.changeVestigingNaam(id, naam);
     }
 
 }

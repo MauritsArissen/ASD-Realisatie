@@ -12,10 +12,9 @@ public class Boeking {
     private final AutoId autoId;
     private final VestigingId startVestigingId;
     private final VestigingId eindVestigingId;
-    private final BetalingId betalingId;
     private MedewerkerId medewerkerId;
 
-    public Boeking(BoekingPeriode boekingPeriode, BoekingStatus boekingStatus, KlantId klantId, AutoId autoId, VestigingId startVestigingId, VestigingId eindVestigingId, BetalingId betalingId) {
+    public Boeking(BoekingPeriode boekingPeriode, BoekingStatus boekingStatus, KlantId klantId, AutoId autoId, VestigingId startVestigingId, VestigingId eindVestigingId) {
         this.boekingId = new BoekingId();
         this.boekingPeriode = boekingPeriode;
         this.boekingStatus = boekingStatus;
@@ -23,7 +22,6 @@ public class Boeking {
         this.autoId = autoId;
         this.startVestigingId = startVestigingId;
         this.eindVestigingId = eindVestigingId;
-        this.betalingId = betalingId;
     }
 
     public BoekingId getBoekingId() {
@@ -36,10 +34,6 @@ public class Boeking {
 
     public AutoId getAutoId() {
         return autoId;
-    }
-
-    public BetalingId getBetalingId() {
-        return betalingId;
     }
 
     public VestigingId getEindVestigingId() {

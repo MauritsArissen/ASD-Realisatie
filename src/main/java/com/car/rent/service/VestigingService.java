@@ -19,4 +19,15 @@ public class VestigingService {
         return repository.getVestigingById(vestigingId);
     }
 
+    public Vestiging addVestiging(Vestiging vestiging) {
+        repository.store(vestiging);
+        return vestiging;
+    }
+
+    public Vestiging changeVestigingNaam(int id, String naam) {
+        Vestiging vestiging = repository.getVestigingById(new VestigingId(id));
+        vestiging.setNaam(naam);
+        return vestiging;
+    }
+
 }
