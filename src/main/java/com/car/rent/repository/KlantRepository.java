@@ -27,9 +27,8 @@ public class KlantRepository {
         klantList.add(klant);
     }
 
-    public Klant getKlantById(int id) {
+    public Klant getKlantById(KlantId compare) {
         Klant a = null;
-        KlantId compare = new KlantId(id);
         for (Klant klant : klantList) {
             if (klant.getKlantId().equals(compare)) {
                 a = klant;

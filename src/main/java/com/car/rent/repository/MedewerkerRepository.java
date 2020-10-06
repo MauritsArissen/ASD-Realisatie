@@ -28,9 +28,8 @@ public class MedewerkerRepository {
         medewerkerList.add(medewerker);
     }
 
-    public Medewerker getMedewerkerById(int id) {
+    public Medewerker getMedewerkerById(MedewerkerId compare) {
         Medewerker m = null;
-        MedewerkerId compare = new MedewerkerId(id);
         for (Medewerker medewerker : medewerkerList) {
             if (medewerker.getMedewerkerId().equals(compare)) {
                 m = medewerker;

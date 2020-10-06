@@ -2,6 +2,7 @@ package com.car.rent.service;
 
 import com.car.rent.domein.Klant;
 import com.car.rent.repository.KlantRepository;
+import com.car.rent.valueobject.KlantId;
 
 import java.util.List;
 
@@ -14,7 +15,8 @@ public class KlantService {
     }
 
     public Klant getById(int id) {
-        return repository.getKlantById(id);
+        KlantId klantId = new KlantId(id);
+        return repository.getKlantById(klantId);
     }
 
     public Klant addKlant(Klant klant) {

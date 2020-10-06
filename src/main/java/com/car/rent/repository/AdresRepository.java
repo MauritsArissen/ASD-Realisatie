@@ -24,9 +24,8 @@ public class AdresRepository {
         adresList.add(adres);
     }
 
-    public Adres getAdresById(int id) {
+    public Adres getAdresById(AdresId compare) {
         Adres a = null;
-        AdresId compare = new AdresId(id);
         for (Adres adres : adresList) {
             if (adres.getAdresId().equals(compare)) {
                 a = adres;

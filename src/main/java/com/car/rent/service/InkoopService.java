@@ -2,6 +2,7 @@ package com.car.rent.service;
 
 import com.car.rent.domein.Inkoop;
 import com.car.rent.repository.InkoopRepository;
+import com.car.rent.valueobject.InkoopId;
 
 import java.util.List;
 
@@ -14,7 +15,8 @@ public class InkoopService {
     }
 
     public Inkoop getById(int id) {
-        return repository.getInkoopById(id);
+        InkoopId inkoopId = new InkoopId(id);
+        return repository.getInkoopById(inkoopId);
     }
 
 }

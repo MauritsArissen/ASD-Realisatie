@@ -26,9 +26,8 @@ public class AutoRepository {
         autoList.add(auto);
     }
 
-    public Auto getAutoById(int id) {
+    public Auto getAutoById(AutoId compare) {
         Auto a = null;
-        AutoId compare = new AutoId(id);
         for (Auto auto : autoList) {
             if (auto.getAutoId().equals(compare)) {
                 a = auto;

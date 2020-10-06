@@ -2,6 +2,7 @@ package com.car.rent.service;
 
 import com.car.rent.domein.Medewerker;
 import com.car.rent.repository.MedewerkerRepository;
+import com.car.rent.valueobject.MedewerkerId;
 
 import java.util.List;
 
@@ -14,7 +15,8 @@ public class MedewerkerService {
     }
 
     public Medewerker getById(int id) {
-        return repository.getMedewerkerById(id);
+        MedewerkerId medewerkerId = new MedewerkerId(id);
+        return repository.getMedewerkerById(medewerkerId);
     }
 
 }

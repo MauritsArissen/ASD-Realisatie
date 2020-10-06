@@ -24,9 +24,8 @@ public class InkoopRepository {
 
     public void store(Inkoop inkoop) { inkoopList.add(inkoop); }
 
-    public Inkoop getInkoopById(int id) {
+    public Inkoop getInkoopById(InkoopId compare) {
         Inkoop i = null;
-        InkoopId compare = new InkoopId(id);
         for (Inkoop inkoop : inkoopList) {
             if (inkoop.getInkoopId().equals(compare)) {
                 i= inkoop;

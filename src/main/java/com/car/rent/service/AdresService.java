@@ -2,6 +2,7 @@ package com.car.rent.service;
 
 import com.car.rent.domein.Adres;
 import com.car.rent.repository.AdresRepository;
+import com.car.rent.valueobject.AdresId;
 
 import java.util.List;
 
@@ -14,7 +15,8 @@ public class AdresService {
     }
 
     public Adres getById(int id) {
-        return repository.getAdresById(id);
+        AdresId adresId = new AdresId(id);
+        return repository.getAdresById(adresId);
     }
 
     public Adres addAdres(Adres adres) {

@@ -26,9 +26,8 @@ public class BoekingRepository {
         boekingList.add(boeking);
     }
 
-    public Boeking getBoekingById(int id) {
+    public Boeking getBoekingById(BoekingId compare) {
         Boeking b = null;
-        BoekingId compare = new BoekingId(id);
         for (Boeking boeking : boekingList) {
             if (boeking.getBoekingId().equals(compare)) {
                 b = boeking;

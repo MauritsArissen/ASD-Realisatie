@@ -2,6 +2,7 @@ package com.car.rent.service;
 
 import com.car.rent.domein.Auto;
 import com.car.rent.repository.AutoRepository;
+import com.car.rent.valueobject.AutoId;
 
 import java.util.List;
 
@@ -14,7 +15,8 @@ public class AutoService {
     }
 
     public Auto getById(int id) {
-        return repository.getAutoById(id);
+        AutoId autoId = new AutoId(id);
+        return repository.getAutoById(autoId);
     }
 
 }
