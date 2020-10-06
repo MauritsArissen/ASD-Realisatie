@@ -2,11 +2,12 @@ package com.car.rent.enumeration;
 
 public enum Status {
     INBEHANDELING(101, "In behandeling"),
-    AFGEHANDELD(102, "Afgehandeld"),
-    GEANNULEERD(103, "Geannuleerd");
+    GEHONOREERD(102, "Gehonoreerd"),
+    AFGEHANDELD(103, "Afgehandeld"),
+    GEANNULEERD(104, "Geannuleerd");
 
-    private int code;
-    private String naam;
+    private final int code;
+    private final String naam;
 
     private Status(int code, String naam) {
         this.code = code;

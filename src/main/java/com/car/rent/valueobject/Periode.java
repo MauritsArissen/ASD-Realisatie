@@ -3,8 +3,8 @@ package com.car.rent.valueobject;
 import java.util.Date;
 
 public class Periode {
-    Date beginDatum;
-    Date eindDatum;
+    final Date beginDatum;
+    final Date eindDatum;
 
     public Periode(Date begin, Date eind) {
         this.beginDatum = begin;

@@ -7,8 +7,8 @@ import com.car.rent.valueobject.Periode;
 import java.util.Date;
 
 public class Boeking {
-    private BoekingId boekingId;
-    private Periode periode;
+    private final BoekingId boekingId;
+    private final Periode periode;
     private Status status;
 
     public Boeking(BoekingId boekingId, Periode periode, Status status) {
