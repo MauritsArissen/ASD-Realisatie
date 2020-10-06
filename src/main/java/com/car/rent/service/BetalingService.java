@@ -28,17 +28,6 @@ public class BetalingService {
 
     public Betaling addBetaling(BoekingId boekingId) {
         Betaling betaling = new Betaling(boekingId);
-
-        BoekingRepository br = BoekingRepository.getInstance();
-        AutoRepository ar = AutoRepository.getInstance();
-
-        Boeking b = br.getBoekingById(boekingId);
-        BoekingPeriode boekingPeriode = b.getBoekingPeriode();
-        Auto a = ar.getAutoById(b.getAutoId());
-        Prijs dagWaarde = a.getDagPrijs();
-
-        betaling.betaal(dagWaarde, boekingPeriode);
-
         repository.store(betaling);
         return betaling;
     }
