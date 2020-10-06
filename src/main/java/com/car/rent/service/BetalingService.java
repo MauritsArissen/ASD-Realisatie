@@ -2,6 +2,8 @@ package com.car.rent.service;
 
 import com.car.rent.domein.Betaling;
 import com.car.rent.repository.BetalingRepository;
+import com.car.rent.valueobject.BetalingId;
+import com.car.rent.valueobject.BoekingId;
 
 import java.util.List;
 
@@ -14,7 +16,14 @@ public class BetalingService {
     }
 
     public Betaling getById(int id) {
-        return repository.getBetalingById(id);
+        BetalingId betalingId = new BetalingId(id);
+        return repository.getBetalingById(betalingId);
+    }
+
+    public Betaling betalingBoeking(int bId) {
+        BoekingId boekingId = new BoekingId(bId);
+        Betaling betaling = null;
+        return betaling;
     }
 
 }
