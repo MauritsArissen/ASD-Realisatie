@@ -4,9 +4,9 @@ import com.car.rent.valueobject.AdresId;
 
 public class Adres {
     private final AdresId adresId;
-    private String stad;
-    private String postcode;
-    private int huisnummer;
+    private final String stad;
+    private final String postcode;
+    private final int huisnummer;
 
     public Adres(AdresId adresid, String stad, String postcode, int huisnummer) {
         this.adresId = adresid;
