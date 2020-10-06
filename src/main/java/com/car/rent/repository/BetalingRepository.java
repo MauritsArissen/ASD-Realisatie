@@ -23,8 +23,8 @@ public class BetalingRepository {
 
     private List<Betaling> betalingList = Stream.of(
             new Betaling(new BoekingId(1)),
-            new Betaling(new BoekingId(1)),
-            new Betaling(new BoekingId(1))
+            new Betaling(new BoekingId(3)),
+            new Betaling(new BoekingId(2))
     ).collect(Collectors.toList());
 
     public List<Betaling> getBetalingList() { return betalingList; }

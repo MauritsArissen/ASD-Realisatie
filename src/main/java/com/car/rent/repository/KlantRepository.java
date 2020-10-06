@@ -22,7 +22,7 @@ public class KlantRepository {
 
     private List<Klant> klantList = Stream.of(
             new Klant(new KlantNaam("Maurits", "Arissen"), new AdresId(1)),
-            new Klant(new KlantNaam("Rick", "Gadella"), new AdresId(1)),
+            new Klant(new KlantNaam("Rick", "Gadella"), new AdresId(2)),
             new Klant(new KlantNaam("Anka", "Andonova"), new AdresId(1)),
             new Klant(new KlantNaam("Frank", "Cornelissen"), new AdresId(3)),
             new Klant(new KlantNaam("Redouan", "El Hidraoui"), new AdresId(3))
