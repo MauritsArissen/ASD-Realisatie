@@ -10,7 +10,7 @@ import java.util.List;
 
 public class BoekingService {
 
-    private final BoekingRepository repository = new BoekingRepository();
+    private final BoekingRepository repository = BoekingRepository.getInstance();
     private final AutoService autoService = new AutoService();
 
     public List<Boeking> getAll() {

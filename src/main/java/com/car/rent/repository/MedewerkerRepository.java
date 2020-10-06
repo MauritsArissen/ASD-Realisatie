@@ -1,9 +1,6 @@
 package com.car.rent.repository;
 
-import com.car.rent.domain.Adres;
-import com.car.rent.domain.Boeking;
 import com.car.rent.domain.Medewerker;
-import com.car.rent.domain.Vestiging;
 import com.car.rent.valueobject.*;
 
 import java.util.ArrayList;
@@ -12,6 +9,15 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class MedewerkerRepository {
+
+    private static MedewerkerRepository instance;
+
+    public static MedewerkerRepository getInstance() {
+        if (instance == null) {
+            instance = new MedewerkerRepository();
+        }
+        return instance;
+    }
 
     private List<Medewerker> medewerkerList= Stream.of(
             new Medewerker(new MedewerkerNaam("Lucas", "Smits"), new AdresId(1), new VestigingId(1)),

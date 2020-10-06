@@ -11,6 +11,15 @@ import java.util.stream.Stream;
 
 public class KlantRepository {
 
+    private static KlantRepository instance;
+
+    public static KlantRepository getInstance() {
+        if (instance == null) {
+            instance = new KlantRepository();
+        }
+        return instance;
+    }
+
     private List<Klant> klantList = Stream.of(
             new Klant(new KlantNaam("Maurits", "Arissen"), new AdresId(1)),
             new Klant(new KlantNaam("Rick", "Gadella"), new AdresId(1)),

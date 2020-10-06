@@ -9,6 +9,15 @@ import java.util.stream.Stream;
 
 public class AdresRepository {
 
+    private static AdresRepository instance;
+
+    public static AdresRepository getInstance() {
+        if (instance == null) {
+            instance = new AdresRepository();
+        }
+        return instance;
+    }
+
     private List<Adres> adresList = Stream.of(
             new Adres("Veenendaal", "3901EC", 65),
             new Adres("Utrecht", "3582PW", 9),

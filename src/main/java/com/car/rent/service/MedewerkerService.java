@@ -8,7 +8,7 @@ import java.util.List;
 
 public class MedewerkerService {
 
-    private final MedewerkerRepository repository = new MedewerkerRepository();
+    private final MedewerkerRepository repository = MedewerkerRepository.getInstance();
 
     public List<Medewerker> getAll() {
         return repository.getMedewerkerList();

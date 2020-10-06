@@ -8,7 +8,7 @@ import java.util.List;
 
 public class AutoService {
 
-    private final AutoRepository repository = new AutoRepository();
+    private final AutoRepository repository = AutoRepository.getInstance();
 
     public List<Auto> getAll() {
         return repository.getAutoList();

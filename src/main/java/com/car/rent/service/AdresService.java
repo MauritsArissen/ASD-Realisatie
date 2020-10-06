@@ -8,7 +8,7 @@ import java.util.List;
 
 public class AdresService {
 
-    private final AdresRepository repository = new AdresRepository();
+    private final AdresRepository repository = AdresRepository.getInstance();
 
     public List<Adres> getAll() {
         return repository.getAdresList();

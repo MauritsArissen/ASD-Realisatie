@@ -12,6 +12,15 @@ import java.util.stream.Stream;
 
 public class BoekingRepository {
 
+    private static BoekingRepository instance;
+
+    public static BoekingRepository getInstance() {
+        if (instance == null) {
+            instance = new BoekingRepository();
+        }
+        return instance;
+    }
+
     private List<Boeking> boekingList = Stream.of(
             new Boeking(new BoekingPeriode(new Date(), new Date()), BoekingStatus.INBEHANDELING, new KlantId(1), new AutoId(1), new VestigingId(1), new VestigingId(2)),
             new Boeking(new BoekingPeriode(new Date(), new Date()), BoekingStatus.GEANNULEERD, new KlantId(1), new AutoId(1), new VestigingId(1), new VestigingId(2)),

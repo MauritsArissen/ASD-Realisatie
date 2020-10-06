@@ -5,7 +5,9 @@ import com.car.rent.valueobject.BoekingId;
 import com.car.rent.valueobject.BoekingPeriode;
 import com.car.rent.valueobject.Prijs;
 
+import java.time.Duration;
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 
 public class Betaling {
     private final BetalingId betalingId;
@@ -25,11 +27,9 @@ public class Betaling {
 
     public Prijs getPrijs() { return prijs; }
 
-    public void setPrijs(Prijs prijs) {
-        this.prijs = prijs;
-    }
-
-    public void pay(Prijs dagWaarde, BoekingPeriode periode) {
-        
+    public void betaal(Prijs dagWaarde, BoekingPeriode periode) {
+        long dagen = ChronoUnit.DAYS.between(periode.getBeginDatum().toInstant(), periode.getEindDatum().toInstant());
+        double total = dagen * dagWaarde.getPrijs();
+        this.prijs = new Prijs(total, dagWaarde.getValuta());
     }
 }

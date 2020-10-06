@@ -12,6 +12,15 @@ import java.util.stream.Stream;
 
 public class AutoRepository {
 
+    private static AutoRepository instance;
+
+    public static AutoRepository getInstance() {
+        if (instance == null) {
+            instance = new AutoRepository();
+        }
+        return instance;
+    }
+
     private List<Auto> autoList = Stream.of(
             new Auto(new AutoType("Fiat", "Panda"), new Prijs(13854.00, Valuta.EURO), new Prijs(85.60, Valuta.EURO)),
             new Auto(new AutoType("Mercedes-Benz", "A-Klasse"), new Prijs(29456.00, Valuta.EURO), new Prijs(120.15, Valuta.EURO)),

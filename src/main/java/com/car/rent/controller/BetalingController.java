@@ -2,6 +2,7 @@ package com.car.rent.controller;
 
 import com.car.rent.domain.Betaling;
 import com.car.rent.service.BetalingService;
+import com.car.rent.valueobject.BoekingId;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
@@ -24,6 +25,8 @@ public class BetalingController {
 
     @PostMapping(value = "/betaling", consumes = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    Betaling newBetaling
+    Betaling newBetaling(@RequestBody BoekingId boekingId) {
+        return service.addBetaling(boekingId);
+    }
 
 }

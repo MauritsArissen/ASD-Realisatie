@@ -3,6 +3,7 @@ package com.car.rent.repository;
 import com.car.rent.domain.Betaling;
 import com.car.rent.enumeration.Valuta;
 import com.car.rent.valueobject.BetalingId;
+import com.car.rent.valueobject.BoekingId;
 import com.car.rent.valueobject.Prijs;
 
 import java.util.List;
@@ -10,13 +11,21 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class BetalingRepository {
+    
+    private static BetalingRepository instance;
+
+    public static BetalingRepository getInstance() {
+        if (instance == null) {
+            instance = new BetalingRepository();
+        }
+        return instance;
+    }
 
     private List<Betaling> betalingList = Stream.of(
-            new Betaling(new Prijs(28.50, Valuta.EURO)),
-            new Betaling(new Prijs(150.90, Valuta.DOLLAR)),
-            new Betaling(new Prijs(300, Valuta.POUNDS))
+            new Betaling(new BoekingId(1)),
+            new Betaling(new BoekingId(1)),
+            new Betaling(new BoekingId(1))
     ).collect(Collectors.toList());
-
 
     public List<Betaling> getBetalingList() { return betalingList; }
 

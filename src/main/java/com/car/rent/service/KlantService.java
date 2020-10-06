@@ -9,7 +9,7 @@ import java.util.List;
 
 public class KlantService {
 
-    private final KlantRepository repository = new KlantRepository();
+    private final KlantRepository repository = KlantRepository.getInstance();
 
     public List<Klant> getAll() {
         return repository.getKlantList();

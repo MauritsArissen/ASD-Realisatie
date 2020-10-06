@@ -10,6 +10,15 @@ import java.util.stream.Stream;
 
 public class VestigingRepository {
 
+    private static VestigingRepository instance;
+
+    public static VestigingRepository getInstance() {
+        if (instance == null) {
+            instance = new VestigingRepository();
+        }
+        return instance;
+    }
+
     private List<Vestiging> vestigingList = Stream.of(
             new Vestiging("Europcar", new AdresId(1)),
             new Vestiging("AutoRent", new AdresId(1))

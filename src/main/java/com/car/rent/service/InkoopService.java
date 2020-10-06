@@ -8,7 +8,7 @@ import java.util.List;
 
 public class InkoopService {
 
-    private final InkoopRepository repository = new InkoopRepository();
+    private final InkoopRepository repository = InkoopRepository.getInstance();
 
     public List<Inkoop> getAll() {
         return repository.getInkoopList();

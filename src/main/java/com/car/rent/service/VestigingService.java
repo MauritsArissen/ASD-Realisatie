@@ -8,7 +8,7 @@ import java.util.List;
 
 public class VestigingService {
 
-    private final VestigingRepository repository = new VestigingRepository();
+    private final VestigingRepository repository = VestigingRepository.getInstance();
 
     public List<Vestiging> getAll() {
         return repository.getVestigingList();
