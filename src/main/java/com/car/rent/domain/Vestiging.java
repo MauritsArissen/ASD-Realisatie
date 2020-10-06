@@ -9,9 +9,9 @@ public class Vestiging {
     private final AdresId adresId;
 
 
-    public Vestiging(String naam, VestigingId vestigingId, AdresId adresId) {
+    public Vestiging(String naam, AdresId adresId) {
+        this.vestigingId = new VestigingId();
         this.naam = naam;
-        this.vestigingId = vestigingId;
         this.adresId = adresId;
     }
 
@@ -19,7 +19,9 @@ public class Vestiging {
         return naam;
     }
 
-    public String setNaam() { return naam; }
+    public void setNaam(String naam) {
+        this.naam = naam;
+    }
 
     public VestigingId getVestigingId() {
         return vestigingId;
