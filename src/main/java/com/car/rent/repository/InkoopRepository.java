@@ -1,9 +1,11 @@
 package com.car.rent.repository;
 
 import com.car.rent.domain.Inkoop;
+import com.car.rent.valueobject.AutoId;
 import com.car.rent.valueobject.InkoopDatum;
 import com.car.rent.valueobject.InkoopId;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -21,9 +23,9 @@ public class InkoopRepository {
     }
     
     private List<Inkoop> inkoopList = Stream.of(
-            new Inkoop(new InkoopDatum(new Date())),
-            new Inkoop(new InkoopDatum(new Date())),
-            new Inkoop(new InkoopDatum(new Date()))
+            new Inkoop(new InkoopDatum(LocalDate.now()), new AutoId(1)),
+            new Inkoop(new InkoopDatum(LocalDate.now()), new AutoId(1)),
+            new Inkoop(new InkoopDatum(LocalDate.now()), new AutoId(1))
     ).collect(Collectors.toList());
     
     public List<Inkoop> getInkoopList() { return inkoopList; }

@@ -1,15 +1,14 @@
 package com.car.rent.valueobject;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class InkoopDatum {
-    final Date inkoopDatum;
+    final LocalDate inkoopDatum;
 
-
-    public InkoopDatum(Date inkoopDatum) {
+    public InkoopDatum(LocalDate inkoopDatum) {
         this.inkoopDatum = inkoopDatum;
     }
 
-    public Date getInkoopDatum() { return inkoopDatum; }
+    public LocalDate getInkoopDatum() { return inkoopDatum; }
 
 }
