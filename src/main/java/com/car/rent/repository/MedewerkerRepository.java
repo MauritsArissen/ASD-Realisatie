@@ -20,10 +20,10 @@ public class MedewerkerRepository {
     }
 
     private List<Medewerker> medewerkerList= Stream.of(
-            new Medewerker(new MedewerkerNaam("Lucas", "Smits"), new AdresId(1), new VestigingId(1)),
-            new Medewerker(new MedewerkerNaam("Sam", "Jacobs"), new AdresId(1), new VestigingId(1)),
-            new Medewerker(new MedewerkerNaam("Bram", "Schouten"), new AdresId(1), new VestigingId(1)),
-            new Medewerker(new MedewerkerNaam("Thomas", "Jonker"), new AdresId(1), new VestigingId(1))
+            new Medewerker(new MedewerkerNaam("Lucas", "Smits"), new AdresId(2), new VestigingId(1)),
+            new Medewerker(new MedewerkerNaam("Sam", "Jacobs"), new AdresId(1), new VestigingId(2)),
+            new Medewerker(new MedewerkerNaam("Bram", "Schouten"), new AdresId(2), new VestigingId(1)),
+            new Medewerker(new MedewerkerNaam("Thomas", "Jonker"), new AdresId(3), new VestigingId(2))
     ).collect(Collectors.toList());
 
     public List<Medewerker> getMedewerkerList() {
