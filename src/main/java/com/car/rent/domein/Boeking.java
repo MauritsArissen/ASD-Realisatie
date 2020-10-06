@@ -1,33 +1,33 @@
 package com.car.rent.domein;
 
-import com.car.rent.enumeration.Status;
+import com.car.rent.enumeration.BoekingStatus;
 import com.car.rent.valueobject.BoekingId;
-import com.car.rent.valueobject.Periode;
+import com.car.rent.valueobject.BoekingPeriode;
 
 public class Boeking {
     private final BoekingId boekingId;
-    private final Periode periode;
-    private Status status;
+    private final BoekingPeriode boekingPeriode;
+    private BoekingStatus boekingStatus;
 
-    public Boeking(BoekingId boekingId, Periode periode, Status status) {
+    public Boeking(BoekingId boekingId, BoekingPeriode boekingPeriode, BoekingStatus boekingStatus) {
         this.boekingId = boekingId;
-        this.periode = periode;
-        this.status = status;
+        this.boekingPeriode = boekingPeriode;
+        this.boekingStatus = boekingStatus;
     }
 
     public BoekingId getBoekingId() {
         return boekingId;
     }
 
-    public Periode getPeriode() {
-        return periode;
+    public BoekingPeriode getBoekingPeriode() {
+        return boekingPeriode;
     }
 
-    public Status getStatus() {
-        return status;
+    public BoekingStatus getBoekingStatus() {
+        return boekingStatus;
     }
 
-    public void setStatus(Status status) {
-        this.status = status;
+    public void setBoekingStatus(BoekingStatus boekingStatus) {
+        this.boekingStatus = boekingStatus;
     }
 }

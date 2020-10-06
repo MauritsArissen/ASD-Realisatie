@@ -1,6 +1,6 @@
 package com.car.rent.enumeration;
 
-public enum Status {
+public enum BoekingStatus {
     INBEHANDELING(101, "In behandeling"),
     GEHONOREERD(102, "Gehonoreerd"),
     AFGEHANDELD(103, "Afgehandeld"),
@@ -9,7 +9,7 @@ public enum Status {
     private final int code;
     private final String naam;
 
-    Status(int code, String naam) {
+    BoekingStatus(int code, String naam) {
         this.code = code;
         this.naam = naam;
     }

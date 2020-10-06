@@ -1,9 +1,9 @@
 package com.car.rent.repository;
 
 import com.car.rent.domein.Boeking;
-import com.car.rent.enumeration.Status;
+import com.car.rent.enumeration.BoekingStatus;
 import com.car.rent.valueobject.BoekingId;
-import com.car.rent.valueobject.Periode;
+import com.car.rent.valueobject.BoekingPeriode;
 
 import java.util.Date;
 import java.util.List;
@@ -13,9 +13,9 @@ import java.util.stream.Stream;
 public class BoekingRepository {
 
     private List<Boeking> boekingList = Stream.of(
-            new Boeking(new BoekingId(), new Periode(new Date(), new Date()), Status.AFGEHANDELD),
-            new Boeking(new BoekingId(), new Periode(new Date(), new Date()), Status.GEANNULEERD),
-            new Boeking(new BoekingId(), new Periode(new Date(), new Date()), Status.INBEHANDELING)
+            new Boeking(new BoekingId(), new BoekingPeriode(new Date(), new Date()), BoekingStatus.AFGEHANDELD),
+            new Boeking(new BoekingId(), new BoekingPeriode(new Date(), new Date()), BoekingStatus.GEANNULEERD),
+            new Boeking(new BoekingId(), new BoekingPeriode(new Date(), new Date()), BoekingStatus.INBEHANDELING)
     ).collect(Collectors.toList());
 
     public List<Boeking> getBoekingList() {

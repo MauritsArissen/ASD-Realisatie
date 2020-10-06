@@ -2,11 +2,11 @@ package com.car.rent.valueobject;
 
 import java.util.Date;
 
-public class Periode {
+public class BoekingPeriode {
     final Date beginDatum;
     final Date eindDatum;
 
-    public Periode(Date begin, Date eind) {
+    public BoekingPeriode(Date begin, Date eind) {
         this.beginDatum = begin;
         this.eindDatum = eind;
     }
