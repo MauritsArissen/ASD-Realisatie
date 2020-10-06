@@ -1,8 +1,7 @@
 package com.car.rent.repository;
 
-import com.car.rent.domein.Klant;
+import com.car.rent.domain.Klant;
 import com.car.rent.valueobject.AdresId;
-import com.car.rent.valueobject.BoekingId;
 import com.car.rent.valueobject.KlantId;
 import com.car.rent.valueobject.KlantNaam;
 

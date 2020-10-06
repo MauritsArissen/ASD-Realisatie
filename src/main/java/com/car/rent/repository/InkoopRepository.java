@@ -1,11 +1,8 @@
 package com.car.rent.repository;
 
-import com.car.rent.domein.Inkoop;
-import com.car.rent.enumeration.Valuta;
-import com.car.rent.valueobject.BetalingId;
+import com.car.rent.domain.Inkoop;
 import com.car.rent.valueobject.InkoopDatum;
 import com.car.rent.valueobject.InkoopId;
-import com.car.rent.valueobject.Prijs;
 
 import java.util.Date;
 import java.util.List;

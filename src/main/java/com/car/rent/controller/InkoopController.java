@@ -1,6 +1,6 @@
 package com.car.rent.controller;
 
-import com.car.rent.domein.Inkoop;
+import com.car.rent.domain.Inkoop;
 import com.car.rent.service.InkoopService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

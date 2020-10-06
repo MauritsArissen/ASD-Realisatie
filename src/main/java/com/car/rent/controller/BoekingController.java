@@ -1,6 +1,6 @@
 package com.car.rent.controller;
 
-import com.car.rent.domein.Boeking;
+import com.car.rent.domain.Boeking;
 import com.car.rent.service.BoekingService;
 import org.json.JSONObject;
 import org.springframework.web.bind.annotation.*;

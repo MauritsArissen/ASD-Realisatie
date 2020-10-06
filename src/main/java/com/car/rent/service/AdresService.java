@@ -1,6 +1,6 @@
 package com.car.rent.service;
 
-import com.car.rent.domein.Adres;
+import com.car.rent.domain.Adres;
 import com.car.rent.repository.AdresRepository;
 import com.car.rent.valueobject.AdresId;
 

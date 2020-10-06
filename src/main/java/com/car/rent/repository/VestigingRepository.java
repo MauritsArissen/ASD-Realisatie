@@ -1,7 +1,7 @@
 package com.car.rent.repository;
 
 
-import com.car.rent.domein.Vestiging;
+import com.car.rent.domain.Vestiging;
 import com.car.rent.valueobject.VestigingId;
 
 import java.util.List;

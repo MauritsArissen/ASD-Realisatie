@@ -1,6 +1,6 @@
 package com.car.rent.service;
 
-import com.car.rent.domein.Inkoop;
+import com.car.rent.domain.Inkoop;
 import com.car.rent.repository.InkoopRepository;
 import com.car.rent.valueobject.InkoopId;
 
