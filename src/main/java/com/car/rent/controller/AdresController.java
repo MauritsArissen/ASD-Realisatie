@@ -2,9 +2,8 @@ package com.car.rent.controller;
 
 import com.car.rent.domein.Adres;
 import com.car.rent.service.AdresService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -21,6 +20,12 @@ public class AdresController {
     @GetMapping("/adres/{id}")
     Adres one(@PathVariable int id) {
         return service.getById(id);
+    }
+
+    @PostMapping(value = "/adres", consumes = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    Adres newAdres(@RequestBody Adres adres) {
+        return service.addAdres(adres);
     }
 
 }

@@ -17,4 +17,9 @@ public class AdresService {
         return repository.getAdresById(id);
     }
 
+    public Adres addAdres(Adres adres) {
+        repository.store(adres);
+        return adres;
+    }
+
 }

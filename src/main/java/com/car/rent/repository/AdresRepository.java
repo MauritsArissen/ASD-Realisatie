@@ -10,10 +10,10 @@ import java.util.stream.Stream;
 public class AdresRepository {
 
     private List<Adres> adresList = Stream.of(
-            new Adres(new AdresId(), "Veenendaal", "3901EC", 65),
-            new Adres(new AdresId(), "Utrecht", "3582PW", 9),
-            new Adres(new AdresId(), "Utrecht", "3584CS", 15),
-            new Adres(new AdresId(), "Amsterdam", "1073GB", 247)
+            new Adres("Veenendaal", "3901EC", 65),
+            new Adres("Utrecht", "3582PW", 9),
+            new Adres("Utrecht", "3584CS", 15),
+            new Adres("Amsterdam", "1073GB", 247)
     ).collect(Collectors.toList());
 
     public List<Adres> getAdresList() {
