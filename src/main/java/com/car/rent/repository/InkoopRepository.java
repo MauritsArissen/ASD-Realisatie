@@ -1,0 +1,38 @@
+package com.car.rent.repository;
+
+import com.car.rent.domein.Inkoop;
+import com.car.rent.enumeration.Valuta;
+import com.car.rent.valueobject.BetalingId;
+import com.car.rent.valueobject.InkoopDatum;
+import com.car.rent.valueobject.InkoopId;
+import com.car.rent.valueobject.Prijs;
+
+import java.util.Date;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+public class InkoopRepository {
+    private List<Inkoop> inkoopList = Stream.of(
+            new Inkoop(new InkoopId(), new InkoopDatum(new Date())),
+            new Inkoop(new InkoopId(), new InkoopDatum(new Date())),
+            new Inkoop(new InkoopId(), new InkoopDatum(new Date()))
+    ).collect(Collectors.toList());
+
+
+    public List<Inkoop> getInkoopListList() { return inkoopList; }
+
+    public void store(Inkoop inkoop) { inkoopList.add(inkoop); }
+
+    public Inkoop getInkoopById(int id) {
+        Inkoop i = null;
+        InkoopId compare = new InkoopId(id);
+        for (Inkoop inkoop : inkoopList) {
+            if (inkoop.getInkoopId().equals(compare)) {
+                i= inkoop;
+                break;
+            }
+        }
+        return i;
+    }
+}
