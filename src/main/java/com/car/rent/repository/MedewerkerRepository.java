@@ -1,9 +1,9 @@
 package com.car.rent.repository;
 
-import com.car.rent.domein.Adres;
-import com.car.rent.domein.Boeking;
-import com.car.rent.domein.Medewerker;
-import com.car.rent.domein.Vestiging;
+import com.car.rent.domain.Adres;
+import com.car.rent.domain.Boeking;
+import com.car.rent.domain.Medewerker;
+import com.car.rent.domain.Vestiging;
 import com.car.rent.valueobject.*;
 
 import java.util.ArrayList;
