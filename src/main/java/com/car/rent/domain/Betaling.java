@@ -1,5 +1,7 @@
 package com.car.rent.domain;
 
+import com.car.rent.repository.AutoRepository;
+import com.car.rent.repository.BoekingRepository;
 import com.car.rent.valueobject.BetalingId;
 import com.car.rent.valueobject.BoekingId;
 import com.car.rent.valueobject.BoekingPeriode;
@@ -19,6 +21,7 @@ public class Betaling {
         this.betalingId = new BetalingId();
         this.boekingId = boekingId;
         this.datum = LocalDate.now();
+        this.betaal();
     }
 
     public BetalingId getBetalingId() { return betalingId; }
@@ -27,7 +30,15 @@ public class Betaling {
 
     public Prijs getPrijs() { return prijs; }
 
-    public void betaal(Prijs dagWaarde, BoekingPeriode periode) {
+    public void betaal() {
+        BoekingRepository br = BoekingRepository.getInstance();
+        AutoRepository ar = AutoRepository.getInstance();
+
+        Boeking b = br.getBoekingById(this.boekingId);
+        BoekingPeriode periode = b.getBoekingPeriode();
+        Auto a = ar.getAutoById(b.getAutoId());
+        Prijs dagWaarde = a.getDagPrijs();
+
         long dagen = ChronoUnit.DAYS.between(periode.getBeginDatum().toInstant(), periode.getEindDatum().toInstant());
         double total = dagen * dagWaarde.getPrijs();
         this.prijs = new Prijs(total, dagWaarde.getValuta());
