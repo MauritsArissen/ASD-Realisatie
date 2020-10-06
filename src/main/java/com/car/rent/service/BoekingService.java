@@ -19,4 +19,10 @@ public class BoekingService {
         return repository.getBoekingById(boekingId);
     }
 
+    public Boeking retourneringAuto(int boekingId, int vestigingId) {
+        Boeking b = repository.getBoekingById(new BoekingId(boekingId));
+
+        return null;
+    }
+
 }
