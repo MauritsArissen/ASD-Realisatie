@@ -4,8 +4,6 @@ import com.car.rent.enumeration.Status;
 import com.car.rent.valueobject.BoekingId;
 import com.car.rent.valueobject.Periode;
 
-import java.util.Date;
-
 public class Boeking {
     private final BoekingId boekingId;
     private final Periode periode;

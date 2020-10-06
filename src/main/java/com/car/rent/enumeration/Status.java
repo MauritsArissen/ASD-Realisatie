@@ -9,7 +9,7 @@ public enum Status {
     private final int code;
     private final String naam;
 
-    private Status(int code, String naam) {
+    Status(int code, String naam) {
         this.code = code;
         this.naam = naam;
     }
