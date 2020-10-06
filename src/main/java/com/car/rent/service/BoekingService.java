@@ -22,6 +22,11 @@ public class BoekingService {
         return repository.getBoekingById(boekingId);
     }
 
+    public Boeking addBoeking(Boeking b) {
+        repository.store(b);
+        return b;
+    }
+
     public Boeking retourneringAuto(int boekingid) {
         Boeking b = repository.getBoekingById(new BoekingId(boekingid));
         b.retournerningAuto();
