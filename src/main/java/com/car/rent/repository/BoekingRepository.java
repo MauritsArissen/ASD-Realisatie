@@ -5,6 +5,7 @@ import com.car.rent.domein.Klant;
 import com.car.rent.enumeration.BoekingStatus;
 import com.car.rent.valueobject.*;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -38,12 +39,12 @@ public class BoekingRepository {
         return b;
     }
 
-    public List<Boeking> getBoekingByKlantId(int id) {
-        List<Boeking> boekingen = null;
-        KlantId compare = new KlantId(id);
+    public List<Boeking> getBoekingByKlantId(KlantId compare) {
+        List<Boeking> boekingen = new ArrayList<>();
         for (Boeking boeking : boekingList) {
-            if (boeking.getBoekingId().equals(compare)) {
+            if (boeking.getKlantId().equals(compare)) {
                 boekingen.add(boeking);
+                System.out.println(boeking.getBoekingId().getId());
             }
         }
         return boekingen;

@@ -28,6 +28,26 @@ public class Boeking {
         return boekingId;
     }
 
+    public KlantId getKlantId() {
+        return klantId;
+    }
+
+    public AutoId getAutoId() {
+        return autoId;
+    }
+
+    public BetalingId getBetalingId() {
+        return betalingId;
+    }
+
+    public VestigingId getEindVestigingId() {
+        return eindVestigingId;
+    }
+
+    public VestigingId getStartVestigingId() {
+        return startVestigingId;
+    }
+
     public BoekingPeriode getBoekingPeriode() {
         return boekingPeriode;
     }
