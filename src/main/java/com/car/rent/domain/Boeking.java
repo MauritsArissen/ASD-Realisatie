@@ -74,7 +74,7 @@ public class Boeking {
         AutoRepository repository = new AutoRepository();
 
         Auto a = repository.getAutoById(this.autoId);
-        // a.processRetour...
+        // validaties etc... op de auto in de toekomst.
 
         this.boekingStatus = BoekingStatus.AFGEHANDELD;
     }
