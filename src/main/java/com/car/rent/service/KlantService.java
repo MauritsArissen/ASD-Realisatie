@@ -17,4 +17,9 @@ public class KlantService {
         return repository.getKlantById(id);
     }
 
+    public Klant addKlant(Klant klant) {
+        repository.store(klant);
+        return klant;
+    }
+
 }

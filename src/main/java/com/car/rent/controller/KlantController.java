@@ -2,9 +2,8 @@ package com.car.rent.controller;
 
 import com.car.rent.domein.Klant;
 import com.car.rent.service.KlantService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -21,6 +20,12 @@ public class KlantController {
     @GetMapping("/klant/{id}")
     Klant one(@PathVariable int id) {
         return service.getById(id);
+    }
+
+    @PostMapping(value = "/klant", consumes = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    Klant newKlant(@RequestBody Klant klant) {
+        return service.addKlant(klant);
     }
 
 }
