@@ -2,6 +2,7 @@ package com.car.rent.repository;
 
 
 import com.car.rent.domein.Vestiging;
+import com.car.rent.valueobject.AdresId;
 import com.car.rent.valueobject.VestigingId;
 
 import java.util.List;
@@ -11,8 +12,8 @@ import java.util.stream.Stream;
 public class VestigingRepository {
 
     private List<Vestiging> vestigingList = Stream.of(
-            new Vestiging("Europcar", new VestigingId()),
-            new Vestiging("AutoRent", new VestigingId())
+            new Vestiging("Europcar", new VestigingId(), new AdresId(1)),
+            new Vestiging("AutoRent", new VestigingId(), new AdresId(1))
     ).collect(Collectors.toList());
 
     public List<Vestiging> getVestigingList() {
