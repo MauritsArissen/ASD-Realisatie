@@ -23,9 +23,8 @@ public class VestigingRepository {
         vestigingList.add(vestiging);
     }
 
-    public Vestiging getVestigingById(int id) {
+    public Vestiging getVestigingById(VestigingId compare) {
         Vestiging v = null;
-        VestigingId compare = new VestigingId(id);
         for (Vestiging vestiging : vestigingList) {
             if (vestiging.getVestigingId().equals(compare)) {
                 v = vestiging;

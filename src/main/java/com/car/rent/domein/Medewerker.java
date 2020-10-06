@@ -10,8 +10,8 @@ public class Medewerker {
     private AdresId adresId;
 
 
-    public Medewerker(MedewerkerId medewerkerId, MedewerkerNaam medewerkerNaam, AdresId adresId) {
-        this.medewerkerId = medewerkerId;
+    public Medewerker(MedewerkerNaam medewerkerNaam, AdresId adresId) {
+        this.medewerkerId = new MedewerkerId();
         this.medewerkerNaam = medewerkerNaam;
         this.adresId = adresId;
     }

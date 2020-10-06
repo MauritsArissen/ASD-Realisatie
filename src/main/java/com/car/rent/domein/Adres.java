@@ -8,8 +8,8 @@ public class Adres {
     private final String postcode;
     private final int huisnummer;
 
-    public Adres(AdresId adresid, String stad, String postcode, int huisnummer) {
-        this.adresId = adresid;
+    public Adres(String stad, String postcode, int huisnummer) {
+        this.adresId = new AdresId();
         this.stad = stad;
         this.postcode = postcode;
         this.huisnummer = huisnummer;

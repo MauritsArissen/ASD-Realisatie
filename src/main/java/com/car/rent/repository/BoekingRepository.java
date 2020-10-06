@@ -13,10 +13,10 @@ import java.util.stream.Stream;
 public class BoekingRepository {
 
     private List<Boeking> boekingList = Stream.of(
-            new Boeking(new BoekingId(), new BoekingPeriode(new Date(), new Date()), BoekingStatus.AFGEHANDELD, new KlantId(1), new AutoId(1), new VestigingId(1), new VestigingId(2), new BetalingId(1)),
-            new Boeking(new BoekingId(), new BoekingPeriode(new Date(), new Date()), BoekingStatus.GEANNULEERD, new KlantId(1), new AutoId(1), new VestigingId(1), new VestigingId(2), new BetalingId(1)),
-            new Boeking(new BoekingId(), new BoekingPeriode(new Date(), new Date()), BoekingStatus.INBEHANDELING, new KlantId(1), new AutoId(1), new VestigingId(1), new VestigingId(2), new BetalingId(1)),
-            new Boeking(new BoekingId(), new BoekingPeriode(new Date(), new Date()), BoekingStatus.GEHONOREERD, new KlantId(1), new AutoId(1), new VestigingId(1), new VestigingId(2), new BetalingId(1))
+            new Boeking(new BoekingPeriode(new Date(), new Date()), BoekingStatus.AFGEHANDELD, new KlantId(1), new AutoId(1), new VestigingId(1), new VestigingId(2), new BetalingId(1)),
+            new Boeking(new BoekingPeriode(new Date(), new Date()), BoekingStatus.GEANNULEERD, new KlantId(1), new AutoId(1), new VestigingId(1), new VestigingId(2), new BetalingId(1)),
+            new Boeking(new BoekingPeriode(new Date(), new Date()), BoekingStatus.INBEHANDELING, new KlantId(1), new AutoId(1), new VestigingId(1), new VestigingId(2), new BetalingId(1)),
+            new Boeking(new BoekingPeriode(new Date(), new Date()), BoekingStatus.GEHONOREERD, new KlantId(1), new AutoId(1), new VestigingId(1), new VestigingId(2), new BetalingId(1))
     ).collect(Collectors.toList());
 
     public List<Boeking> getBoekingList() {
@@ -27,9 +27,8 @@ public class BoekingRepository {
         boekingList.add(boeking);
     }
 
-    public Boeking getBoekingById(int id) {
+    public Boeking getBoekingById(BoekingId compare) {
         Boeking b = null;
-        BoekingId compare = new BoekingId(id);
         for (Boeking boeking : boekingList) {
             if (boeking.getBoekingId().equals(compare)) {
                 b = boeking;

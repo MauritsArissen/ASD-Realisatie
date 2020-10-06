@@ -11,8 +11,8 @@ public class Klant {
     private AdresId adresId;
     private final BoekingId boekingId;
 
-    public Klant(KlantId klantId, KlantNaam klantNaam, AdresId adresId, BoekingId boekingId) {
-        this.klantId = klantId;
+    public Klant(KlantNaam klantNaam, AdresId adresId, BoekingId boekingId) {
+        this.klantId = new KlantId();
         this.klantNaam = klantNaam;
         this.adresId = adresId;
         this.boekingId = boekingId;

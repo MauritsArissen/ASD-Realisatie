@@ -10,8 +10,8 @@ public class Betaling {
     private final LocalDate datum;
     private final Prijs prijs;
 
-    public Betaling(BetalingId betalingId, Prijs prijs) {
-        this.betalingId = betalingId;
+    public Betaling(Prijs prijs) {
+        this.betalingId = new BetalingId();
         this.datum = LocalDate.now();
         this.prijs = prijs;
     }

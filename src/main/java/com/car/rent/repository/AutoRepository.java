@@ -13,9 +13,9 @@ import java.util.stream.Stream;
 public class AutoRepository {
 
     private List<Auto> autoList = Stream.of(
-            new Auto(new AutoId(), new AutoType("Fiat", "Panda"), new Prijs(13854.00, Valuta.EURO), new Prijs(85.60, Valuta.EURO)),
-            new Auto(new AutoId(), new AutoType("Mercedes-Benz", "A-Klasse"), new Prijs(29456.00, Valuta.EURO), new Prijs(120.15, Valuta.EURO)),
-            new Auto(new AutoId(), new AutoType("Porsche", "Cayenne"), new Prijs(100075.00, Valuta.EURO), new Prijs(310.00, Valuta.EURO))
+            new Auto(new AutoType("Fiat", "Panda"), new Prijs(13854.00, Valuta.EURO), new Prijs(85.60, Valuta.EURO)),
+            new Auto(new AutoType("Mercedes-Benz", "A-Klasse"), new Prijs(29456.00, Valuta.EURO), new Prijs(120.15, Valuta.EURO)),
+            new Auto(new AutoType("Porsche", "Cayenne"), new Prijs(100075.00, Valuta.EURO), new Prijs(310.00, Valuta.EURO))
     ).collect(Collectors.toList());
 
     public List<Auto> getAutoList() {
@@ -26,9 +26,8 @@ public class AutoRepository {
         autoList.add(auto);
     }
 
-    public Auto getAutoById(int id) {
+    public Auto getAutoById(AutoId compare) {
         Auto a = null;
-        AutoId compare = new AutoId(id);
         for (Auto auto : autoList) {
             if (auto.getAutoId().equals(compare)) {
                 a = auto;

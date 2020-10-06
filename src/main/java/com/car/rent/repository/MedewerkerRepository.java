@@ -14,10 +14,10 @@ import java.util.stream.Stream;
 public class MedewerkerRepository {
 
     private List<Medewerker> medewerkerList= Stream.of(
-            new Medewerker(new MedewerkerId(), new MedewerkerNaam("Lucas", "Smits"), new AdresId(1)),
-            new Medewerker(new MedewerkerId(), new MedewerkerNaam("Sam", "Jacobs"), new AdresId(1)),
-            new Medewerker(new MedewerkerId(), new MedewerkerNaam("Bram", "Schouten"), new AdresId(1) ),
-            new Medewerker(new MedewerkerId(), new MedewerkerNaam("Thomas", "Jonker"), new AdresId(1))
+            new Medewerker(new MedewerkerNaam("Lucas", "Smits"), new AdresId(1)),
+            new Medewerker(new MedewerkerNaam("Sam", "Jacobs"), new AdresId(1)),
+            new Medewerker(new MedewerkerNaam("Bram", "Schouten"), new AdresId(1) ),
+            new Medewerker(new MedewerkerNaam("Thomas", "Jonker"), new AdresId(1))
     ).collect(Collectors.toList());
 
     public List<Medewerker> getMedewerkerList() {
@@ -28,9 +28,8 @@ public class MedewerkerRepository {
         medewerkerList.add(medewerker);
     }
 
-    public Medewerker getMedewerkerById(int id) {
+    public Medewerker getMedewerkerById(MedewerkerId compare) {
         Medewerker m = null;
-        MedewerkerId compare = new MedewerkerId(id);
         for (Medewerker medewerker : medewerkerList) {
             if (medewerker.getMedewerkerId().equals(compare)) {
                 m = medewerker;

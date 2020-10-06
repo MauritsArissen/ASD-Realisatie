@@ -13,8 +13,8 @@ public class Boeking {
     private final VestigingId eindVestigingId;
     private final BetalingId betalingId;
 
-    public Boeking(BoekingId boekingId, BoekingPeriode boekingPeriode, BoekingStatus boekingStatus, KlantId klantId, AutoId autoId, VestigingId startVestigingId, VestigingId eindVestigingId, BetalingId betalingId) {
-        this.boekingId = boekingId;
+    public Boeking(BoekingPeriode boekingPeriode, BoekingStatus boekingStatus, KlantId klantId, AutoId autoId, VestigingId startVestigingId, VestigingId eindVestigingId, BetalingId betalingId) {
+        this.boekingId = new BoekingId();
         this.boekingPeriode = boekingPeriode;
         this.boekingStatus = boekingStatus;
         this.klantId = klantId;

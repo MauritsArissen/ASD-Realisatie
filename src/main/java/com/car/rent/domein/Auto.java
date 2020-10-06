@@ -10,8 +10,8 @@ public class Auto {
     private final Prijs aanschafPrijs;
     private Prijs dagPrijs;
 
-    public Auto(AutoId autoId, AutoType autoType, Prijs aanschafPrijs, Prijs dagPrijs) {
-        this.autoId = autoId;
+    public Auto(AutoType autoType, Prijs aanschafPrijs, Prijs dagPrijs) {
+        this.autoId = new AutoId();
         this.autoType = autoType;
         this.aanschafPrijs = aanschafPrijs;
         this.dagPrijs = dagPrijs;
