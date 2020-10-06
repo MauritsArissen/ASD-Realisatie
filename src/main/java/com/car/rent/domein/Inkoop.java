@@ -12,8 +12,8 @@ public class Inkoop {
 
 
 
-    public Inkoop(InkoopId inkoopId, InkoopDatum inkoopDatum) {
-        this.inkoopId = inkoopId;
+    public Inkoop(InkoopDatum inkoopDatum) {
+        this.inkoopId = new InkoopId();
         this.inkoopDatum = inkoopDatum;
     }
 

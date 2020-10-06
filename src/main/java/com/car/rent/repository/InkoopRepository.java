@@ -14,9 +14,9 @@ import java.util.stream.Stream;
 
 public class InkoopRepository {
     private List<Inkoop> inkoopList = Stream.of(
-            new Inkoop(new InkoopId(), new InkoopDatum(new Date())),
-            new Inkoop(new InkoopId(), new InkoopDatum(new Date())),
-            new Inkoop(new InkoopId(), new InkoopDatum(new Date()))
+            new Inkoop(new InkoopDatum(new Date())),
+            new Inkoop(new InkoopDatum(new Date())),
+            new Inkoop(new InkoopDatum(new Date()))
     ).collect(Collectors.toList());
 
 

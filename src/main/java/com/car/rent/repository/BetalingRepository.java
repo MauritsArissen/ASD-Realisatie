@@ -12,9 +12,9 @@ import java.util.stream.Stream;
 public class BetalingRepository {
 
     private List<Betaling> betalingList = Stream.of(
-            new Betaling(new BetalingId(), new Prijs(28.50, Valuta.EURO)),
-            new Betaling(new BetalingId(), new Prijs(150.90, Valuta.DOLLAR)),
-            new Betaling(new BetalingId(), new Prijs(300, Valuta.POUNDS))
+            new Betaling(new Prijs(28.50, Valuta.EURO)),
+            new Betaling(new Prijs(150.90, Valuta.DOLLAR)),
+            new Betaling(new Prijs(300, Valuta.POUNDS))
 
     ).collect(Collectors.toList());
 

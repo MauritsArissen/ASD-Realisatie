@@ -9,8 +9,8 @@ public class Boeking {
     private final BoekingPeriode boekingPeriode;
     private BoekingStatus boekingStatus;
 
-    public Boeking(BoekingId boekingId, BoekingPeriode boekingPeriode, BoekingStatus boekingStatus) {
-        this.boekingId = boekingId;
+    public Boeking(BoekingPeriode boekingPeriode, BoekingStatus boekingStatus) {
+        this.boekingId = new BoekingId();
         this.boekingPeriode = boekingPeriode;
         this.boekingStatus = boekingStatus;
     }

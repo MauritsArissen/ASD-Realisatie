@@ -9,8 +9,8 @@ public class Klant {
     private final KlantNaam klantNaam;
     private AdresId adresId;
 
-    public Klant(KlantId klantId, KlantNaam klantNaam, AdresId adresId) {
-        this.klantId = klantId;
+    public Klant(KlantNaam klantNaam, AdresId adresId) {
+        this.klantId = new KlantId();
         this.klantNaam = klantNaam;
         this.adresId = adresId;
     }
