@@ -1,0 +1,511 @@
+{
+	"info": {
+		"_postman_id": "d0936f52-d63b-4a4a-bbda-0de0093c7ce9",
+		"name": "AutoHurenApplicatie",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AdresController",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/adres",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"adres"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetOne (id: 2)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/adres/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"adres",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetOne (id: 5)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/adres/5",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"adres",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddAdres",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"stad\": \"Rhenen\",\r\n    \"postcode\": \"3911JJ\",\r\n    \"huisnummer\": 15\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/adres",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"adres"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "KlantController",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/klant",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"klant"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetOne (id: 1)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/klant/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"klant",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetOne (id: 6)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/klant/6",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"klant",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddKlant",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"klantNaam\": {\r\n        \"voornaam\": \"Jan\",\r\n        \"achternaam\": \"van Steeg\"\r\n    },\r\n    \"adresId\": {\r\n        \"id\": 4\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/klant",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"klant"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ChangeKlantAdres",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/klant/6",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"klant",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "VestigingController",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/vestiging",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vestiging"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetOne (id: 1)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/vestiging/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vestiging",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetOne (id: 3)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/vestiging/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vestiging",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddVestiging",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"naam\": \"Supercars\",\r\n    \"adresId\": {\r\n        \"id\": 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/vestiging",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vestiging"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ChangeVestigingNaam",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "Slechtecars",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/vestiging/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vestiging",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "BetalingController",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/betaling",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"betaling"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetOne (id: 2)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/betaling/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"betaling",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetOne (id: 4)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/betaling/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"betaling",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddBetaling",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/betaling",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"betaling"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "AutoController",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/auto",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetOne (id: 3)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/auto/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auto",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetOne (id: 4)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/auto/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auto",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddAuto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"autoType\": {\r\n        \"merk\": \"Toyota\",\r\n        \"model\": \"Aygo\"\r\n    },\r\n    \"aanschafPrijs\": {\r\n        \"prijs\": 16420.0,\r\n        \"valuta\": \"EURO\"\r\n    },\r\n    \"dagPrijs\": {\r\n        \"prijs\": 70.95,\r\n        \"valuta\": \"EURO\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/auto",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auto"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
