@@ -26,7 +26,6 @@ public class BoekingService {
         Boeking b = repository.getBoekingById(new BoekingId(boekingid));
         b.retournerningAuto();
 
-        autoService.autoInleveren(b.getAutoId());
         return b;
     }
 

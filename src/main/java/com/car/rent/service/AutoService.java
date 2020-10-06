@@ -19,8 +19,4 @@ public class AutoService {
         return repository.getAutoById(autoId);
     }
 
-    public void autoInleveren(AutoId id) {
-
-    }
-
 }
