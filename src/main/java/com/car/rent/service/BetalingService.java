@@ -1,6 +1,6 @@
 package com.car.rent.service;
 
-import com.car.rent.domein.Betaling;
+import com.car.rent.domain.Betaling;
 import com.car.rent.repository.BetalingRepository;
 import com.car.rent.valueobject.BetalingId;
 import com.car.rent.valueobject.BoekingId;

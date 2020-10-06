@@ -1,6 +1,6 @@
 package com.car.rent.service;
 
-import com.car.rent.domein.Boeking;
+import com.car.rent.domain.Boeking;
 import com.car.rent.repository.BoekingRepository;
 import com.car.rent.valueobject.AutoId;
 import com.car.rent.valueobject.BoekingId;

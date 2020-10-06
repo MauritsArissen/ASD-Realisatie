@@ -1,6 +1,6 @@
 package com.car.rent.repository;
 
-import com.car.rent.domein.Auto;
+import com.car.rent.domain.Auto;
 import com.car.rent.enumeration.Valuta;
 import com.car.rent.valueobject.AutoId;
 import com.car.rent.valueobject.AutoType;

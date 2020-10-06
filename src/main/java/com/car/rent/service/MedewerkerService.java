@@ -1,6 +1,6 @@
 package com.car.rent.service;
 
-import com.car.rent.domein.Medewerker;
+import com.car.rent.domain.Medewerker;
 import com.car.rent.repository.MedewerkerRepository;
 import com.car.rent.valueobject.MedewerkerId;
 
