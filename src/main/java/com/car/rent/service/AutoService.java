@@ -19,4 +19,9 @@ public class AutoService {
         return repository.getAutoById(autoId);
     }
 
+    public Auto addAuto(Auto auto) {
+        repository.store(auto);
+        return auto;
+    }
+
 }
