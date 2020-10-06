@@ -16,4 +16,9 @@ public class KlantNaam {
     public String getAchternaam() {
         return achternaam;
     }
+
+    @Override
+    public String toString() {
+        return String.format("%s %s", voornaam, achternaam);
+    }
 }
