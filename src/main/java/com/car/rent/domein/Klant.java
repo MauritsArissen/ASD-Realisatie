@@ -9,13 +9,11 @@ public class Klant {
     private final KlantId klantId;
     private final KlantNaam klantNaam;
     private AdresId adresId;
-    private final BoekingId boekingId;
 
-    public Klant(KlantNaam klantNaam, AdresId adresId, BoekingId boekingId) {
+    public Klant(KlantNaam klantNaam, AdresId adresId) {
         this.klantId = new KlantId();
         this.klantNaam = klantNaam;
         this.adresId = adresId;
-        this.boekingId = boekingId;
     }
 
     public KlantId getKlantId() {
