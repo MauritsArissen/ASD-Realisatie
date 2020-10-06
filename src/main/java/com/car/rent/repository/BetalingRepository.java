@@ -17,7 +17,6 @@ public class BetalingRepository {
             new Betaling(new Prijs(28.50, Valuta.EURO)),
             new Betaling(new Prijs(150.90, Valuta.DOLLAR)),
             new Betaling(new Prijs(300, Valuta.POUNDS))
-
     ).collect(Collectors.toList());
 
 
