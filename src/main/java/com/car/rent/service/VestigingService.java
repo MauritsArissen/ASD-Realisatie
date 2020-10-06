@@ -1,6 +1,6 @@
 package com.car.rent.service;
 
-import com.car.rent.domein.Vestiging;
+import com.car.rent.domain.Vestiging;
 import com.car.rent.repository.VestigingRepository;
 import com.car.rent.valueobject.VestigingId;
 

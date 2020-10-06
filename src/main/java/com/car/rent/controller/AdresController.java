@@ -1,6 +1,6 @@
 package com.car.rent.controller;
 
-import com.car.rent.domein.Adres;
+import com.car.rent.domain.Adres;
 import com.car.rent.service.AdresService;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;

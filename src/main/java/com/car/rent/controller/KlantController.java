@@ -1,7 +1,8 @@
 package com.car.rent.controller;
 
-import com.car.rent.domein.Klant;
+import com.car.rent.domain.Klant;
 import com.car.rent.service.KlantService;
+import com.car.rent.valueobject.AdresId;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
@@ -26,6 +27,12 @@ public class KlantController {
     @ResponseBody
     Klant newKlant(@RequestBody Klant klant) {
         return service.addKlant(klant);
+    }
+
+    @PutMapping(value = "/klant/{id}", consumes = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    Klant changeKlantAdres(@PathVariable int id, @RequestBody AdresId adresId) {
+        return service.changeKlantAdres(id, adresId);
     }
 
 }

@@ -1,6 +1,6 @@
 package com.car.rent.service;
 
-import com.car.rent.domein.Auto;
+import com.car.rent.domain.Auto;
 import com.car.rent.repository.AutoRepository;
 import com.car.rent.valueobject.AutoId;
 
