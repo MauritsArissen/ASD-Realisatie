@@ -30,7 +30,7 @@ public class BoekingController {
     }
 
     @PostMapping(value = "/boeking", consumes = MediaType.APPLICATION_JSON_VALUE)
-    Boeking createAuto(@RequestBody Boeking boeking) {
+    Boeking boekAuto(@RequestBody Boeking boeking) {
         return service.addBoeking(boeking);
     }
 
