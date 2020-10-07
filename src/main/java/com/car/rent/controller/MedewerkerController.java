@@ -2,9 +2,8 @@ package com.car.rent.controller;
 
 import com.car.rent.domain.Medewerker;
 import com.car.rent.service.MedewerkerService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -23,4 +22,7 @@ public class MedewerkerController {
         return service.getById(id);
     }
 
+    @PostMapping(value = "/medewerker", consumes = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    Medewerker newMedewerker(@RequestBody Medewerker medewerker) { return service.addMedewerker(medewerker); }
 }
