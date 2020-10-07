@@ -2,6 +2,7 @@ package com.car.rent.service;
 
 import com.car.rent.domain.Medewerker;
 import com.car.rent.repository.MedewerkerRepository;
+import com.car.rent.valueobject.AdresId;
 import com.car.rent.valueobject.MedewerkerId;
 
 import java.util.List;
@@ -24,4 +25,9 @@ public class MedewerkerService {
         return medewerker;
     }
 
+    public Medewerker changeMedewerkerAdres(int id, AdresId adresId) {
+        Medewerker medewerker = repository.getMedewerkerById(new MedewerkerId(id));
+        medewerker.setAdresId(adresId);
+        return medewerker;
+    }
 }
