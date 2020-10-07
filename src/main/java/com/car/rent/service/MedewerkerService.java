@@ -19,4 +19,9 @@ public class MedewerkerService {
         return repository.getMedewerkerById(medewerkerId);
     }
 
+    public Medewerker addMedewerker(Medewerker medewerker) {
+        repository.store(medewerker);
+        return medewerker;
+    }
+
 }
