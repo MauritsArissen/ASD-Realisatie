@@ -1,6 +1,7 @@
 package com.car.rent.service;
 
 import com.car.rent.domain.Boeking;
+import com.car.rent.enumeration.BoekingStatus;
 import com.car.rent.repository.BoekingRepository;
 import com.car.rent.valueobject.AutoId;
 import com.car.rent.valueobject.BoekingId;
@@ -32,6 +33,12 @@ public class BoekingService {
         b.retournerningAuto();
 
         return b;
+    }
+
+    public Boeking boekingAnnuleren(int boekingId){
+        Boeking boeking = repository.getBoekingById(new BoekingId(boekingId));
+        boeking.setBoekingStatus(BoekingStatus.GEANNULEERD);
+        return boeking;
     }
 
 }

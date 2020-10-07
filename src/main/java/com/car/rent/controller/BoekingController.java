@@ -1,9 +1,8 @@
 package com.car.rent.controller;
 
-import com.car.rent.domain.Adres;
 import com.car.rent.domain.Boeking;
 import com.car.rent.service.BoekingService;
-import org.json.JSONObject;
+import com.car.rent.valueobject.BoekingId;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
@@ -34,5 +33,9 @@ public class BoekingController {
     Boeking createAuto(@RequestBody Boeking boeking) {
         return service.addBoeking(boeking);
     }
+
+    @PutMapping("/boeking/{boekingId}/annuleren")
+    @ResponseBody
+    Boeking boekingAnnuleren (@PathVariable int boekingId){return service.boekingAnnuleren(boekingId);}
 
 }
