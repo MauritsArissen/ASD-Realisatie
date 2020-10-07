@@ -505,6 +505,321 @@
 				}
 			],
 			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "BoekingController",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/boeking",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"boeking"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetOne (id: 4)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/boeking/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"boeking",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetOne (id: 5)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/boeking/5",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"boeking",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddBoeking",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"boekingPeriode\": {\r\n        \"beginDatum\": \"2020-10-07T08:11:36.061+00:00\",\r\n        \"eindDatum\": \"2020-12-07T09:11:36.061+00:00\"\r\n    },\r\n    \"boekingStatus\": \"INBEHANDELING\",\r\n    \"klantId\": {\r\n        \"id\": 1\r\n    },\r\n    \"autoId\": {\r\n        \"id\": 1\r\n    },\r\n    \"startVestigingId\": {\r\n        \"id\": 1\r\n    },\r\n    \"eindVestigingId\": {\r\n        \"id\": 2\r\n    },\r\n    \"medewerkerId\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/boeking",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"boeking"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retournering",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/boeking/4/retournering",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"boeking",
+								"4",
+								"retournering"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "InkoopController",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/inkoop",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"inkoop"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetOne (id: 3)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/inkoop/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"inkoop",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetOne (id: 4)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/inkoop/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"inkoop",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "InkoopAuto()",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"autoType\": {\r\n        \"merk\": \"Toyota\",\r\n        \"model\": \"Aygo\"\r\n    },\r\n    \"aanschafPrijs\": {\r\n        \"prijs\": 16420.0,\r\n        \"valuta\": \"EURO\"\r\n    },\r\n    \"dagPrijs\": {\r\n        \"prijs\": 70.95,\r\n        \"valuta\": \"EURO\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/inkoop",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"inkoop"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "MedewerkerController",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/medewerker",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"medewerker"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetOne (id: 2)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/medewerker/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"medewerker",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetOne (id: 5)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/medewerker/5",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"medewerker",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddMedewerker",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"medewerkerNaam\": {\r\n        \"voornaam\": \"Jonas\",\r\n        \"achternaam\": \"Brother\"\r\n    },\r\n    \"adresId\": {\r\n        \"id\": 3\r\n    },\r\n    \"vestigingId\": {\r\n        \"id\": 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/medewerker",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"medewerker"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ChangeMedewerkerAdres",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/medewerker/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"medewerker",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
 		}
 	],
 	"protocolProfileBehavior": {}

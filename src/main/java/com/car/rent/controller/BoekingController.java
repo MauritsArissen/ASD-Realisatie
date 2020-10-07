@@ -24,7 +24,7 @@ public class BoekingController {
         return service.getById(id);
     }
 
-    @PutMapping("/boeking/{boekingid}/retournerning")
+    @PutMapping("/boeking/{boekingid}/retournering")
     @ResponseBody
     Boeking retournerningAuto(@PathVariable int boekingid) {
         return service.retourneringAuto(boekingid);

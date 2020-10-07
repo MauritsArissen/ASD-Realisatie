@@ -1,10 +1,10 @@
 package com.car.rent.controller;
 
+import com.car.rent.domain.Auto;
 import com.car.rent.domain.Inkoop;
 import com.car.rent.service.InkoopService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -21,6 +21,12 @@ public class InkoopController {
     @GetMapping("/inkoop/{id}")
     Inkoop one(@PathVariable int id) {
         return service.getById(id);
+    }
+
+    @PostMapping(value = "/inkoop", consumes = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    Inkoop inkoopAuto(@RequestBody Auto auto) {
+        return service.inkoopAuto(auto);
     }
 
 }
