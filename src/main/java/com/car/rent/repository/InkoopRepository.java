@@ -24,8 +24,8 @@ public class InkoopRepository {
     
     private List<Inkoop> inkoopList = Stream.of(
             new Inkoop(new InkoopDatum(LocalDate.now()), new AutoId(1)),
-            new Inkoop(new InkoopDatum(LocalDate.now()), new AutoId(1)),
-            new Inkoop(new InkoopDatum(LocalDate.now()), new AutoId(1))
+            new Inkoop(new InkoopDatum(LocalDate.now()), new AutoId(2)),
+            new Inkoop(new InkoopDatum(LocalDate.now()), new AutoId(3))
     ).collect(Collectors.toList());
     
     public List<Inkoop> getInkoopList() { return inkoopList; }
